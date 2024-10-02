@@ -1,0 +1,241 @@
+%-------------------------
+% Resume in Latex
+% Author : acblackburn
+% Based off of: https://github.com/jakeryang/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+% only for pdflatex
+% \input{glyphtounicode}
+
+% fontawesome
+\usepackage{fontawesome5}
+
+% fixed width
+\usepackage[scale=0.90,lf]{FiraMono}
+
+% light-grey
+\definecolor{light-grey}{gray}{0.83}
+\definecolor{dark-grey}{gray}{0.3}
+\definecolor{text-grey}{gray}{.08}
+
+\DeclareRobustCommand{\ebseries}{\fontseries{eb}\selectfont}
+\DeclareTextFontCommand{\texteb}{\ebseries}
+
+% custom underilne
+\usepackage{contour}
+\usepackage[normalem]{ulem}
+\renewcommand{\ULdepth}{1.8pt}
+\contourlength{0.8pt}
+\newcommand{\myuline}[1]{%
+  \uline{\phantom{#1}}%
+  \llap{\contour{white}{#1}}%
+}
+
+
+% custom font: helvetica-style
+\usepackage{tgheros}
+\renewcommand*\familydefault{\sfdefault} 
+%% Only if the base font of the document is to be sans serif
+\usepackage[T1]{fontenc}
+
+%% Import sensitive information from a separate file that is ignored by git
+\input{config.tex}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{0in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting - serif
+% \titleformat{\section}{
+%   \vspace{2pt} \scshape \raggedright\large % header section
+% }{}{0em}{}[\color{black} \titlerule \vspace{-5pt}]
+
+% sans serif sections
+\titleformat {\section}{
+    \bfseries \vspace{2pt} \raggedright \large % header section
+}{}{0em}{}[\color{light-grey} {\titlerule[2pt]} \vspace{-4pt}]
+
+% only for pdflatex
+% Ensure that generate pdf is machine readable/ATS parsable
+% \pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-1pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & {\color{dark-grey}\small #2}\vspace{1pt}\\ % top row of resume entry
+      \textit{#3} & {\color{dark-grey} \small #4}\\ % second row of resume entry
+    \end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+      #1 & {\color{dark-grey}} \\
+    \end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+% CHANGED default leftmargin  0.15 in
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{0pt}}
+
+\color{text-grey}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge Alexander Blackburn}
+    \\ \vspace{5pt}
+    \small \faPhone* \hspace{2pt} \texttt{\myphonenumber} 
+    \hspace{1pt} $|$ \hspace{1pt} 
+    \faEnvelope \hspace{2pt} \texttt{\myemail} \hspace{1pt} $|$ \hspace{1pt} 
+    \faGithub \hspace{2pt} \href{https://github.com/acblackburn}{\myuline{\texttt{GitHub}}} 
+    \hspace{1pt} $|$ \hspace{1pt}
+    \faLinkedin \hspace{2pt} \href{https://www.linkedin.com/in/alexcblackburn/}{\myuline{\texttt{LinkedIn}}}
+    \hspace{1pt} $|$ \hspace{1pt}
+    \faMapMarker* \hspace{2pt}\texttt{London, UK} 
+    \\ \vspace{-3pt}
+\end{center}
+
+%-----------EDUCATION-----------
+\section {EDUCATION}
+  \resumeSubHeadingListStart
+  
+    \resumeSubheading
+      {University of Birmingham}{Birmingham, UK}
+      {MSc Computer Science - Distinction}{Sept. 2021 -- Sept. 2022}
+      	\resumeItemListStart
+      	\resumeItem {Birmingham Masters Scholar 2021}
+        \resumeItemListEnd
+    
+    \resumeSubheading
+      {Cardiff University}{Cardiff, UK}
+      {BEng Mechanical Engineering - First Class Honours}{Sept. 2017 -- Jun. 2021}
+        \resumeItemListStart
+          \resumeItem {Final year dissertation on Convolutional Neural Networks for Road Sign Classification in Autonomous Driving}
+        \resumeItemListEnd
+        
+  \resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------
+\section{EXPERIENCE}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+     {Amazon Prime Video}{London, UK}
+     {Software Development Engineer}{Oct. 2022 - Present}
+    \resumeItemListStart
+      \resumeItem{Worked as a full-stack engineer in the Prime Video Web organisation}
+      \resumeItem{Led a project to migrate team's entire monitoring and dashboarding architecture to AWS CDK Infrastructure as Code}
+      \resumeItem{Project lead on a token propagation task, resulting in optimisations that led to an estimated \$5M in cloud cost savings}
+    \resumeItemListEnd
+        
+      \resumeSubheading
+        {Amazon Prime Video}{London, UK}
+        {Software Development Engineer Intern}{Jun. 2021 -- Sept. 2021}
+        \resumeItemListStart
+          \resumeItem{Project included redesigning the front-end of a webpage for a better user experience, as well as simplifying the design of the page. Received positive feedback, with the new design set for full-deployment upon internship completion.}
+        \resumeItemListEnd
+
+    \resumeSubheading
+      {Modality Partnership}{Birmingham, UK}
+      {Software Developer}{Jun. 2020 -- Oct. 2020}
+      \resumeItemListStart
+        \resumeItem {Contract with Modality, a national GP partnership covering one-million patients}
+        \resumeItem {Created cloud functions that automate the cleaning and upload of finance and patient feedback data to the cloud as well as dashboards that allow partners to gain more data-driven insights into their practices}
+    \resumeItemListEnd
+
+    \resumeSubheading
+      {Jaguar Land Rover}{Coventry, UK}
+      {Product Engineering Undergraduate}{Jun. 2019 -- Jun. 2020}
+      \resumeItemListStart
+        \resumeItem{12-month undergraduate placement in battery testing and verification}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------
+\section{PROJECTS}
+    \resumeSubHeadingListStart
+        \resumeProjectHeading
+              {\textbf{Blockchain Academic Certificates} - \url{github.com/acblackburn/blockchain-academic-certificates}}{Sept. 2022}
+              \resumeItemListStart
+                \resumeItem{Completed as the dissertation whilst studying at the University of Birmingham}
+                \resumeItem{A Ethereum-based decentralised application created using JavaScript, Solidity, React, and gun.js for the creation and verification of tamper-proof academic certificates}
+              \resumeItemListEnd
+        \resumeProjectHeading
+          {\textbf{Modality Cloud Data Pipeline} - \url{github.com/acblackburn/partnership-bigquery-upload}}{Jun. 2020}
+          \resumeItemListStart
+            \resumeItem{Automated the cleaning, upload and storage of business data to the cloud using Python and Google Cloud Platform}
+            \resumeItem{Utilised Serverless Functions to trigger upload scripts as well as BigQuery for an scalable solution to data storage}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+%-----------PROGRAMMING SKILLS-----------
+\section{SKILLS}
+ \begin{itemize}[leftmargin=0in, label={}]
+    \small{\item{
+     \textbf{Languages} {: TypeScript/JavaScript, Scala, Java, Python, HTML/CSS, SQL}\vspace{2pt} \\
+     \textbf{Tools/Frameworks}     {: AWS (particularly: CDK, ECS, CloudWatch), Git/Github, Node.js, React, Spring, CI/CD}
+    }}
+ \end{itemize}
+
+\textbf{References available on request}
+
+%-------------------------------------------
+\end{document}
